@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Changed background color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #111111;
+}
+
+p {
+    color: #111111;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+.button {
+    background-color: white;
+    color: black; /* Changed text color to black */
+    padding: 15px 20px; /* Increased padding for larger buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased gap between buttons */
+    margin-top: 20px; /* Increased margin to move buttons further from the timer */
+}
+
+.timer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%; /* Reduced margin to move timer up */
+}
+
+.timer {
+    font-size: 4vw; /* Adjusted font size for better responsiveness */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10%; /* Reduced margin to move timer up */
+}
+
+#timer {
+    font-size: 4vw; /* Adjusted font size for better responsiveness */
+    font-weight: bold;
+    text-align: center;
+    max-width: 300px; 
+    min-width: 150px;
+}
+
+.header {
+    background-color: rgb(224, 49, 49);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+}
+
+.sandwich-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: fixed;
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    right: -250px; /* Start off-screen */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+    transition: right 0.3s ease;
+}
+
+.dropdown.show {
+    right: 0; /* Slide in from the right */
+}
+
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-divider {
+    height: 1px;
+    margin: 8px 0;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    color: #212529;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.dropdown-item input {
+    margin-right: 8px;
+}
+
+.show {
+    display: block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.profile-picture-container:hover .profile-picture {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.profile-picture-container:hover .edit-icon {
+    display: flex;
+    align-items: center;
+}
+
+.edit-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#account-name {
+    font-size: 24px;
+    font-weight: bold;
+}
