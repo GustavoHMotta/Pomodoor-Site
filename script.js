@@ -69,9 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-
-    // Redirect to index.html when the h1 element is clicked
-    document.querySelector('h1').addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
 });
